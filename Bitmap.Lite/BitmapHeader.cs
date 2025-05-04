@@ -155,5 +155,28 @@ namespace Bitmap.Lite
             NumColors = BitConverter.ToUInt32([data[46], data[47], data[48], data[49]]);
             ImportantColors = BitConverter.ToUInt32([data[50], data[51], data[52], data[53]]);
         }
+
+        public override string ToString()
+        {
+            return
+"numeric_type : " + NumericType +
+"\ntype : " + Type[0] + Type[1] +
+"\nsize : " + Size +
+"\nreserved_1 : " + Reserved1 +
+"\nreserved_2 : " + Reserved2 +
+"\noffset : " + Offset +
+"\ndib_header_size : " + DibHeaderSize +
+"\nwidth_px : " + WidthPx +
+"\nheight_px : " + HeightPx +
+"\nnum_planes : " + NumPlanes +
+"\nbits_per_pixel : " + BitsPerPixel +
+"\ncompression : " + Compression +
+"\nimage_size_bytes : " + ImageSizeBytes +
+"\nx_resolution_ppm : " + XResolutionPpm +
+"\ny_resolution_ppm : " + YResolutionPpm +
+"\nnum_colors : " + NumColors +
+"\nimportant_colors : " + ImportantColors +
+"\npadding_after_each_line : " + PaddingAfterEachLine;
+        }
     }
 }
