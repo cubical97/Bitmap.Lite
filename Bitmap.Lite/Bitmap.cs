@@ -63,7 +63,7 @@ namespace Bitmap.Lite
                 throw new FileNotFoundException($"File not found at {filePath}.");
             var fileExtension = Path.GetExtension(filePath);
 
-            if (fileExtension != "bmp" && fileExtension != "dib")
+            if (fileExtension != ".bmp" && fileExtension != ".dib")
                 throw new FormatException($"File extension '{fileExtension}' is not supported.");
 
             using var file = File.OpenRead(filePath);
